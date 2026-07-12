@@ -142,11 +142,13 @@ section{padding-block:88px;}
 
 /* ---------- Collections carousel ---------- */
 .collections-carousel{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.carousel-row{display:contents;}
 @media (max-width:900px){ .collections-carousel{grid-template-columns:repeat(2,1fr);} }
 @media (max-width:560px){
-  .collections-carousel{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,auto);grid-auto-columns:min(62vw,240px);gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
-  .collections-carousel::-webkit-scrollbar{display:none;}
-  .collection-card{scroll-snap-align:start;}
+  .collections-carousel{display:flex;flex-direction:column;gap:14px;}
+  .carousel-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .carousel-row::-webkit-scrollbar{display:none;}
+  .collection-card{flex:0 0 min(62vw,240px);scroll-snap-align:start;}
 }
 .collection-card{border-radius:6px;overflow:hidden;background:var(--surface);border:1px solid var(--line);cursor:pointer;transition:transform 220ms ease,box-shadow 220ms ease;text-decoration:none;color:var(--ink);display:block;}
 .collection-card:hover,.collection-card:focus-visible{transform:translateY(-6px);box-shadow:var(--shadow);}
@@ -331,6 +333,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       </div>
 
       <div class="collections-carousel reveal" id="carousel">
+        <div class="carousel-row">
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="aurora">
           <div class="collection-media"><div class="media-layer" style="background-image:var(--img1)"></div><div class="media-layer" style="background-image:var(--img2)"></div><div class="media-layer" style="background-image:var(--img3)"></div><div class="media-layer" style="background-image:url(assets/images/img-047.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-048.webp)"></div></div>
           <div class="collection-body">
@@ -403,6 +406,8 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
             <span class="count">Collana, bracciale e orecchini</span>
           </div>
         </a>
+        </div>
+        <div class="carousel-row">
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="unicorn">
           <div class="collection-media"><div class="media-layer" style="background-image:var(--img25)"></div><div class="media-layer" style="background-image:var(--img26)"></div><div class="media-layer" style="background-image:var(--img27)"></div><div class="media-layer" style="background-image:url(assets/images/img-063.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-064.webp)"></div></div>
           <div class="collection-body">
@@ -466,6 +471,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
             <span class="count">Collana, bracciale e orecchini</span>
           </div>
         </a>
+        </div>
       </div>
       <p class="draft-note reveal">Foto e ambientazioni sono generate con AI per questa anteprima, in attesa dello shooting fotografico reale. Nota anche che gli stili non sono ancora allineati tra le collezioni: prezzi indicativi, da confermare con Chiara.</p>
     </div>
