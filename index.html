@@ -118,14 +118,17 @@ a{color:inherit;}
 .hero-slide:nth-child(3){background:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/img-045.webp) center 45%/cover no-repeat;animation-delay:-12s;}
 .hero-slide:nth-child(4){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-046.webp) center/cover no-repeat;animation-delay:-18s;}
 @media (max-width:700px){
-  .hero-slide:nth-child(1){background-position:78% center;}
-  .hero-slide:nth-child(2){background-position:46% center;}
-  .hero-slide:nth-child(3){background-position:50% center;}
-  .hero-slide:nth-child(4){background-position:66% center;}
+  .hero-slide:nth-child(1){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-1-mobile.webp);background-position:center;}
+  .hero-slide:nth-child(2){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-2-mobile.webp);background-position:center;}
+  .hero-slide:nth-child(3){background-image:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/hero-mobile/hero-3-mobile.webp);background-position:center;}
+  .hero-slide:nth-child(4){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-4-mobile.webp);background-position:center;}
 }
 @keyframes heroZoom{0%{transform:scale(1);}100%{transform:scale(1.1);}}
 @media (prefers-reduced-motion: reduce){ .hero-slide{animation:none;transition:none;} }
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,8,0.15) 0%,rgba(14,11,8,0.2) 40%,rgba(10,8,6,0.85) 100%);}
+@media (max-width:700px){
+  .hero-scrim{background:linear-gradient(180deg,rgba(14,11,8,0.28) 0%,rgba(14,11,8,0.4) 30%,rgba(10,8,6,0.82) 58%,rgba(8,6,4,0.95) 100%);}
+}
 .hero-content{position:relative;z-index:2;width:100%;padding-bottom:56px;color:#fff;}
 .hero-content .eyebrow{color:var(--coral);}
 .hero-content .eyebrow::before{background:var(--coral);}
@@ -293,7 +296,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       <li><a href="#contatti">Contatti</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-ghost-light btn-sm" href="#" onclick="return false;">Scrivici su WhatsApp</a>
+      <a class="btn btn-ghost-light btn-sm" href="#" onclick="return false;">Scrivimi su WhatsApp</a>
     </div>
   </div>
 </nav>
@@ -316,7 +319,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       <p class="hero-sub">Collane, bracciali e orecchini annodati a mano con fettuccia: una manifattura misurata, pensata per durare oltre una stagione.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#collezioni">Sfoglia le collezioni</a>
-        <a class="btn btn-ghost-light" href="#" onclick="return false;">Scrivici su WhatsApp</a>
+        <a class="btn btn-ghost-light" href="#" onclick="return false;">Scrivimi su WhatsApp</a>
       </div>
       <div class="hero-dots" role="tablist" aria-label="Vai a un'immagine">
         <button class="hero-dot is-active" aria-label="Immagine 1"></button>
@@ -575,7 +578,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
             <h3 class="h3" style="color:#fff;">Scrivi a Trama Chiara</h3>
             <a class="btn btn-primary" href="#" onclick="return false;" style="margin-top:14px;">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.7 14.3c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.7 1.9.8 2 .1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.2.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.2.5.2.6.4.1.2.1.9-.1 1.5z"/></svg>
-              Scrivici su WhatsApp
+              Scrivimi su WhatsApp
             </a>
           </div>
         </div>
