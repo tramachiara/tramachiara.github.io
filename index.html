@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trama Chiara — collane, braccialetti e orecchini annodati a mano</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/branding/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/favicon-180.png">
+<meta name="theme-color" content="#F6F0E4">
 </head>
 <body>
 <style>
-:root{--img1:url(assets/images/img-001.webp);--img2:url(assets/images/img-002.webp);--img3:url(assets/images/img-003.webp);--img4:url(assets/images/img-004.webp);--img5:url(assets/images/img-005.webp);--img6:url(assets/images/img-006.webp);--img7:url(assets/images/img-007.webp);--img8:url(assets/images/img-008.webp);--img9:url(assets/images/img-009.webp);--img10:url(assets/images/img-010.webp);--img11:url(assets/images/img-011.webp);--img12:url(assets/images/img-012.webp);--img13:url(assets/images/img-013.webp);--img14:url(assets/images/img-014.webp);--img15:url(assets/images/img-015.webp);--img16:url(assets/images/img-016.webp);--img17:url(assets/images/img-017.webp);--img18:url(assets/images/img-018.webp);--img19:url(assets/images/img-019.webp);--img20:url(assets/images/img-020.webp);--img21:url(assets/images/img-021.webp);--img22:url(assets/images/img-022.webp);--img23:url(assets/images/img-023.webp);--img24:url(assets/images/img-024.webp);--img25:url(assets/images/img-025.webp);--img26:url(assets/images/img-026.webp);--img27:url(assets/images/img-027.webp);--img28:url(assets/images/img-028.webp);--img29:url(assets/images/img-029.webp);--img30:url(assets/images/img-030.webp);--img31:url(assets/images/img-031.webp);--img32:url(assets/images/img-032.webp);--img33:url(assets/images/img-033.webp);--img34:url(assets/images/img-034.webp);--img35:url(assets/images/img-035.webp);--img36:url(assets/images/img-036.webp);--img37:url(assets/images/img-037.webp);--img38:url(assets/images/img-038.webp);--img39:url(assets/images/img-039.webp);--img40:url(assets/images/img-040.webp);--img41:url(assets/images/img-041.webp);--img42:url(assets/images/img-042.webp);}
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/font-001.woff2) format('woff2');}
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/font-002.woff2) format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/font-003.woff2) format('woff2');}
@@ -90,8 +94,6 @@ a{color:inherit;}
 .logo-text i{font-style:italic;font-weight:400;color:var(--coral);}
 .nav.is-solid .logo-text i{color:var(--terracotta);}
 .logo-text b{font-weight:500;font-style:normal;}
-.preview-tag{font-family:'Manrope',sans-serif;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.4);border-radius:999px;padding:2px 9px;margin-left:2px;transition:color 300ms ease,border-color 300ms ease;}
-.nav.is-solid .preview-tag{color:var(--taupe);border-color:var(--line);}
 .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;}
 .nav-links a{text-decoration:none;font-size:0.88rem;font-weight:500;color:#fff;padding:6px 2px;border-bottom:1px solid transparent;transition:border-color 200ms ease,color 300ms ease;cursor:pointer;}
 .nav.is-solid .nav-links a{color:var(--ink);}
@@ -113,8 +115,14 @@ a{color:inherit;}
 .hero-slide.is-active{opacity:1;}
 .hero-slide:nth-child(1){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-043.webp) center/cover no-repeat;animation-delay:0s;}
 .hero-slide:nth-child(2){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-044.webp) center/cover no-repeat;animation-delay:-6s;}
-.hero-slide:nth-child(3){background:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/img-045.webp) center 30%/cover no-repeat;animation-delay:-12s;}
+.hero-slide:nth-child(3){background:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/img-045.webp) center 45%/cover no-repeat;animation-delay:-12s;}
 .hero-slide:nth-child(4){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-046.webp) center/cover no-repeat;animation-delay:-18s;}
+@media (max-width:700px){
+  .hero-slide:nth-child(1){background-position:78% center;}
+  .hero-slide:nth-child(2){background-position:46% center;}
+  .hero-slide:nth-child(3){background-position:50% center;}
+  .hero-slide:nth-child(4){background-position:66% center;}
+}
 @keyframes heroZoom{0%{transform:scale(1);}100%{transform:scale(1.1);}}
 @media (prefers-reduced-motion: reduce){ .hero-slide{animation:none;transition:none;} }
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,8,0.15) 0%,rgba(14,11,8,0.2) 40%,rgba(10,8,6,0.85) 100%);}
@@ -133,7 +141,6 @@ a{color:inherit;}
 .hero-claim,.hero-sub{text-shadow:0 2px 20px rgba(0,0,0,0.5);}
 .hero-dot{width:26px;height:3px;border-radius:2px;background:rgba(255,255,255,0.3);border:none;cursor:pointer;padding:0;transition:background 250ms ease,width 250ms ease;}
 .hero-dot.is-active{background:var(--coral);width:40px;}
-.hero-caption{position:absolute;right:24px;bottom:20px;z-index:2;font-size:0.66rem;color:rgba(255,255,255,0.65);background:rgba(0,0,0,0.3);padding:5px 10px;border-radius:999px;}
 
 /* ---------- Sections ---------- */
 section{padding-block:88px;}
@@ -158,7 +165,6 @@ section{padding-block:88px;}
 .collection-body h3{margin-top:8px;}
 .collection-body p{margin-top:8px;font-size:0.9rem;color:var(--taupe);}
 .collection-body .count{display:block;margin-top:12px;font-size:0.72rem;color:var(--taupe);letter-spacing:0.02em;}
-.draft-note{font-size:0.78rem;color:var(--taupe);margin-top:18px;padding:10px 14px;border:1px dashed var(--line);border-radius:6px;background:var(--surface);}
 
 /* ---------- Category cards ---------- */
 .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -167,7 +173,8 @@ section{padding-block:88px;}
 .cat-card:hover,.cat-card:focus-visible{transform:translateY(-6px);box-shadow:var(--shadow);}
 .cat-swatch{aspect-ratio:5/4;position:relative;}
 .cat-body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:8px;}
-.cat-body .price{font-size:0.76rem;color:var(--taupe);}
+.cat-body .price{display:block;font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);margin-top:2px;}
+.cat-body .price-note{display:block;font-size:0.7rem;color:var(--taupe);margin-top:2px;}
 .cat-body .arrow{margin-top:10px;font-size:0.82rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;}
 .cat-body .arrow svg{width:14px;height:14px;transition:transform 200ms ease;}
 .cat-card:hover .arrow svg{transform:translateX(4px);}
@@ -278,7 +285,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         <path class="logo-mark" d="M14.5 9.3c1-1.3 2-1.3 3 0" stroke-width="1.3" stroke-linecap="round"/>
       </svg>
       <span class="logo-text"><i>Trama</i> <b>Chiara</b></span>
-      <span class="preview-tag">Anteprima</span>
     </a>
     <ul class="nav-links">
       <li><a href="#collezioni">Collezioni</a></li>
@@ -302,7 +308,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
     </div>
     <div class="hero-scrim"></div>
     <div class="hero-textband" aria-hidden="true"></div>
-    <span class="hero-caption">Anteprima: immagini generate, in attesa dello shooting reale</span>
     <div class="wrap hero-content">
       <span class="eyebrow">Manifattura tessile, fatta a mano</span>
       <div class="hero-claim-wrap">
@@ -335,7 +340,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       <div class="collections-carousel reveal" id="carousel">
         <div class="carousel-row">
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="aurora">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img1)"></div><div class="media-layer" style="background-image:var(--img2)"></div><div class="media-layer" style="background-image:var(--img3)"></div><div class="media-layer" style="background-image:url(assets/images/img-047.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-048.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Pastello</span>
             <h3 class="h3">Aurora Pop</h3>
@@ -344,7 +349,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="amalfi">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img4)"></div><div class="media-layer" style="background-image:var(--img5)"></div><div class="media-layer" style="background-image:var(--img6)"></div><div class="media-layer" style="background-image:url(assets/images/img-049.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-050.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Ispirazione mare</span>
             <h3 class="h3">Intreccio d'Amalfi</h3>
@@ -353,7 +358,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="sera">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img7)"></div><div class="media-layer" style="background-image:var(--img8)"></div><div class="media-layer" style="background-image:var(--img9)"></div><div class="media-layer" style="background-image:url(assets/images/img-051.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-052.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Studio scuro</span>
             <h3 class="h3">Sera Vellutata</h3>
@@ -362,7 +367,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="sotto">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img10)"></div><div class="media-layer" style="background-image:var(--img11)"></div><div class="media-layer" style="background-image:var(--img12)"></div><div class="media-layer" style="background-image:url(assets/images/img-053.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-054.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Toni autunnali</span>
             <h3 class="h3">Sottobosco</h3>
@@ -371,7 +376,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="sunset">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img13)"></div><div class="media-layer" style="background-image:var(--img14)"></div><div class="media-layer" style="background-image:var(--img15)"></div><div class="media-layer" style="background-image:url(assets/images/img-055.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-056.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Colore pieno</span>
             <h3 class="h3">Sunset</h3>
@@ -380,7 +385,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="dorata">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img16)"></div><div class="media-layer" style="background-image:var(--img17)"></div><div class="media-layer" style="background-image:var(--img18)"></div><div class="media-layer" style="background-image:url(assets/images/img-057.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-058.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Oro pieno</span>
             <h3 class="h3">Trama Dorata</h3>
@@ -389,7 +394,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="terracruda">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img19)"></div><div class="media-layer" style="background-image:var(--img20)"></div><div class="media-layer" style="background-image:var(--img21)"></div><div class="media-layer" style="background-image:url(assets/images/img-059.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-060.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Toni neutri</span>
             <h3 class="h3">Terra Cruda</h3>
@@ -398,7 +403,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="oltremare">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img22)"></div><div class="media-layer" style="background-image:var(--img23)"></div><div class="media-layer" style="background-image:var(--img24)"></div><div class="media-layer" style="background-image:url(assets/images/img-061.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-062.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Blu profondo</span>
             <h3 class="h3">Oltremare</h3>
@@ -409,7 +414,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         </div>
         <div class="carousel-row">
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="unicorn">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img25)"></div><div class="media-layer" style="background-image:var(--img26)"></div><div class="media-layer" style="background-image:var(--img27)"></div><div class="media-layer" style="background-image:url(assets/images/img-063.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-064.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Multicolor pastello</span>
             <h3 class="h3">Unicorn</h3>
@@ -418,7 +423,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="ocra">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img28)"></div><div class="media-layer" style="background-image:var(--img29)"></div><div class="media-layer" style="background-image:var(--img30)"></div><div class="media-layer" style="background-image:url(assets/images/img-065.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-066.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Ocra caldo</span>
             <h3 class="h3">Ocra</h3>
@@ -426,17 +431,17 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
             <span class="count">Collana, bracciale e orecchini</span>
           </div>
         </a>
-        <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="bianca">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img31)"></div><div class="media-layer" style="background-image:var(--img32)"></div><div class="media-layer" style="background-image:var(--img33)"></div><div class="media-layer" style="background-image:url(assets/images/img-067.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-068.webp)"></div></div>
+        <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="total-white">
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Bianco pieno</span>
-            <h3 class="h3">Bianca</h3>
+            <h3 class="h3">Total White</h3>
             <p>Bianco pieno, lavorato a uncinetto in poliestere, fotografato su ardesia scura con polvere dorata sparsa. Il contrasto piu netto del catalogo: chiaro su scuro, senza vie di mezzo.</p>
             <span class="count">Collana, bracciale e orecchini</span>
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="lilla">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img34)"></div><div class="media-layer" style="background-image:var(--img35)"></div><div class="media-layer" style="background-image:var(--img36)"></div><div class="media-layer" style="background-image:url(assets/images/img-069.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-070.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Lilla tenue</span>
             <h3 class="h3">Lilla</h3>
@@ -445,7 +450,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="cielo">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img37)"></div><div class="media-layer" style="background-image:var(--img38)"></div><div class="media-layer" style="background-image:var(--img39)"></div><div class="media-layer" style="background-image:url(assets/images/img-071.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-072.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Azzurro cielo</span>
             <h3 class="h3">Cielo</h3>
@@ -454,7 +459,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="ibisco">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img40)"></div><div class="media-layer" style="background-image:var(--img41)"></div><div class="media-layer" style="background-image:var(--img42)"></div><div class="media-layer" style="background-image:url(assets/images/img-073.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-074.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Fucsia acceso</span>
             <h3 class="h3">Ibisco Lavico</h3>
@@ -463,7 +468,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           </div>
         </a>
         <a class="collection-card" href="#" onclick="return false;" data-lightbox="collection" data-key="basalto">
-          <div class="collection-media"><div class="media-layer" style="background-image:var(--img1)"></div><div class="media-layer" style="background-image:var(--img2)"></div><div class="media-layer" style="background-image:var(--img3)"></div><div class="media-layer" style="background-image:url(assets/images/img-075.webp)"></div><div class="media-layer" style="background-image:url(assets/images/img-076.webp)"></div></div>
+          <div class="collection-media"><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-set.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-lifestyle.webp)"></div></div>
           <div class="collection-body">
             <span class="collection-tag">Grigio pietra</span>
             <h3 class="h3">Contrasti di Basalto</h3>
@@ -473,7 +478,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         </a>
         </div>
       </div>
-      <p class="draft-note reveal">Foto e ambientazioni sono generate con AI per questa anteprima, in attesa dello shooting fotografico reale. Nota anche che gli stili non sono ancora allineati tra le collezioni: prezzi indicativi, da confermare con Chiara.</p>
     </div>
   </section>
 
@@ -488,33 +492,36 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       </div>
       <div class="cats">
         <a class="cat-card reveal" href="#" onclick="return false;" data-lightbox="category" data-key="collane">
-          <div class="cat-swatch"><div class="media-layer" style="background-image:var(--img7)"></div><div class="media-layer" style="background-image:var(--img10)"></div><div class="media-layer" style="background-image:var(--img1)"></div><div class="media-layer" style="background-image:var(--img4)"></div><div class="media-layer" style="background-image:var(--img13)"></div><div class="media-layer" style="background-image:var(--img16)"></div><div class="media-layer" style="background-image:var(--img19)"></div><div class="media-layer" style="background-image:var(--img22)"></div><div class="media-layer" style="background-image:var(--img25)"></div><div class="media-layer" style="background-image:var(--img28)"></div><div class="media-layer" style="background-image:var(--img31)"></div><div class="media-layer" style="background-image:var(--img34)"></div><div class="media-layer" style="background-image:var(--img37)"></div><div class="media-layer" style="background-image:var(--img40)"></div><div class="media-layer" style="background-image:var(--img1)"></div></div>
+          <div class="cat-swatch"><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-collana.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-collana.webp)"></div></div>
           <div class="cat-body">
             <h3 class="h3">Collane</h3>
             <p class="lede" style="font-size:0.9rem;">Girocollo o lunghe da sovrapporre, con nodi a vista.</p>
-            <span class="price">Esempio prezzo: da 18€</span>
+            <span class="price">Da 18€</span>
+            <span class="price-note">Prezzo indicativo</span>
             <span class="arrow">Scopri la collezione
               <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
         </a>
         <a class="cat-card reveal" href="#" onclick="return false;" data-lightbox="category" data-key="bracciali">
-          <div class="cat-swatch"><div class="media-layer" style="background-image:var(--img11)"></div><div class="media-layer" style="background-image:var(--img5)"></div><div class="media-layer" style="background-image:var(--img8)"></div><div class="media-layer" style="background-image:var(--img2)"></div><div class="media-layer" style="background-image:var(--img14)"></div><div class="media-layer" style="background-image:var(--img17)"></div><div class="media-layer" style="background-image:var(--img20)"></div><div class="media-layer" style="background-image:var(--img23)"></div><div class="media-layer" style="background-image:var(--img26)"></div><div class="media-layer" style="background-image:var(--img29)"></div><div class="media-layer" style="background-image:var(--img32)"></div><div class="media-layer" style="background-image:var(--img35)"></div><div class="media-layer" style="background-image:var(--img38)"></div><div class="media-layer" style="background-image:var(--img41)"></div><div class="media-layer" style="background-image:var(--img2)"></div></div>
+          <div class="cat-swatch"><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-bracciale.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-bracciale.webp)"></div></div>
           <div class="cat-body">
             <h3 class="h3">Bracciali</h3>
             <p class="lede" style="font-size:0.9rem;">Regolabili con nodo scorsoio, pensati per essere impilati.</p>
-            <span class="price">Esempio prezzo: da 12€</span>
+            <span class="price">Da 12€</span>
+            <span class="price-note">Prezzo indicativo</span>
             <span class="arrow">Scopri la collezione
               <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
         </a>
         <a class="cat-card reveal" href="#" onclick="return false;" data-lightbox="category" data-key="orecchini">
-          <div class="cat-swatch"><div class="media-layer" style="background-image:var(--img6)"></div><div class="media-layer" style="background-image:var(--img9)"></div><div class="media-layer" style="background-image:var(--img12)"></div><div class="media-layer" style="background-image:var(--img3)"></div><div class="media-layer" style="background-image:var(--img15)"></div><div class="media-layer" style="background-image:var(--img18)"></div><div class="media-layer" style="background-image:var(--img21)"></div><div class="media-layer" style="background-image:var(--img24)"></div><div class="media-layer" style="background-image:var(--img27)"></div><div class="media-layer" style="background-image:var(--img30)"></div><div class="media-layer" style="background-image:var(--img33)"></div><div class="media-layer" style="background-image:var(--img36)"></div><div class="media-layer" style="background-image:var(--img39)"></div><div class="media-layer" style="background-image:var(--img42)"></div><div class="media-layer" style="background-image:var(--img3)"></div></div>
+          <div class="cat-swatch"><div class="media-layer" style="background-image:url(assets/images/collezioni/aurora-pop/aurora-pop-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/intreccio-d-amalfi/intreccio-d-amalfi-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sera-vellutata/sera-vellutata-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sottobosco/sottobosco-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/sunset/sunset-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/trama-dorata/trama-dorata-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/terra-cruda/terra-cruda-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/oltremare/oltremare-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/unicorn/unicorn-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ocra/ocra-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/total-white/total-white-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/lilla/lilla-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/cielo/cielo-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/ibisco-lavico/ibisco-lavico-orecchini.webp)"></div><div class="media-layer" style="background-image:url(assets/images/collezioni/contrasti-di-basalto/contrasti-di-basalto-orecchini.webp)"></div></div>
           <div class="cat-body">
             <h3 class="h3">Orecchini</h3>
             <p class="lede" style="font-size:0.9rem;">Leggeri per tutti i giorni, più decisi per un'occasione.</p>
-            <span class="price">Esempio prezzo: da 15€</span>
+            <span class="price">Da 15€</span>
+            <span class="price-note">Prezzo indicativo</span>
             <span class="arrow">Scopri la collezione
               <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -529,10 +536,10 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       <div class="story reveal">
         <div class="story-inner">
           <figure class="story-portrait" style="background:url(assets/images/img-077.webp) center/cover no-repeat">
-            <figcaption>Chiara, nel suo atelier</figcaption>
+            <figcaption>Nel mio atelier</figcaption>
           </figure>
           <div class="story-copy">
-            <span class="eyebrow">Chi la fa</span>
+            <span class="eyebrow">Chi sono</span>
             <h2 class="h2" style="margin-top:14px;">La Storia dietro la Trama</h2>
             <p class="pull-quote">"Ogni nodo lo faccio io, con le mani: per questo due pezzi non sono mai davvero uguali."</p>
             <p class="lede">Nella vita di tutti i giorni sono un'insegnante, un lavoro che amo e a cui dedico gran parte delle mie energie. Ma tra le righe di una quotidianità spesso frenetica e impegnativa, ho sentito il bisogno di trovare uno spazio che fosse solo mio. Un luogo dove rallentare, staccare la mente e ritrovare il mio baricentro.</p>
@@ -557,11 +564,11 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
           <div>
             <span class="eyebrow" style="color:var(--coral);">Per un regalo</span>
             <h2 class="h2" style="margin-top:14px;">Un ordine semplice, una lavorazione curata.</h2>
-            <p class="lede" style="margin-top:14px;color:rgba(243,236,223,0.78);">Scegli il pezzo, scrivi su WhatsApp con la misura o il colore che preferisci: Chiara conferma disponibilità e tempi, e prepara ogni pacco a mano.</p>
+            <p class="lede" style="margin-top:14px;color:rgba(243,236,223,0.78);">Scegli il pezzo, scrivimi su WhatsApp con la misura o il colore che preferisci: confermo io disponibilità e tempi, e preparo ogni pacco a mano.</p>
             <ul class="steps">
               <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Scegli collana, bracciale o orecchini dal catalogo</li>
               <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Invia l'ordine via WhatsApp: nessun pagamento online richiesto</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Chiara conferma e prepara il pezzo a mano</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Confermo e preparo il pezzo a mano</li>
             </ul>
           </div>
           <div class="gift-card">
@@ -570,7 +577,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.7 14.3c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.7 1.9.8 2 .1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.2.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.2.5.2.6.4.1.2.1.9-.1 1.5z"/></svg>
               Scrivici su WhatsApp
             </a>
-            <p>Numero e orari di risposta da confermare con Chiara.</p>
           </div>
         </div>
       </div>
@@ -589,18 +595,17 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         <h4>Esplora</h4>
         <a href="#collezioni">Collezioni</a>
         <a href="#categorie">Collane, bracciali, orecchini</a>
-        <a href="#storia">La storia di Chiara</a>
+        <a href="#storia">La mia storia</a>
       </div>
       <div class="footer-col">
         <h4>Contatti</h4>
-        <a href="#" onclick="return false;">WhatsApp (da confermare)</a>
-        <a href="#" onclick="return false;">Instagram (da confermare)</a>
+        <a href="#" onclick="return false;">WhatsApp</a>
+        <a href="#" onclick="return false;">Instagram</a>
         <a href="#" onclick="return false;">email@tramachiara.it</a>
       </div>
     </div>
     <div class="footer-note">
-      <span>© Trama Chiara. Anteprima di progetto, testi e prezzi in bozza.</span>
-      <span>Design preview generata con Claude, non ancora il sito definitivo.</span>
+      <span>© 2026 Trama Chiara</span>
     </div>
   </div>
 </footer>
@@ -695,7 +700,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
     collection: {
       sera: {title:"Sera Vellutata", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, nella tonalita corallo che da il nome alla collezione. La collana e annodata a mano fino allo spessore che vedi in foto, senza cuciture; gli orecchini riprendono lo stesso nodo rotondo, appesi a un gancio in metallo."},
       sotto: {title:"Sottobosco", desc:"Qui i colori si mescolano: verde bosco, prugna e crema intrecciati nello stesso filo. Collana e bracciale si chiudono con un laccio a fiocco, cosi restano regolabili; gli orecchini sono piccole sfere annodate, pensate per pesare il meno possibile all'orecchio."},
-      aurora: {title:"Aurora Pop", desc:"La treccia piu sottile delle quattro collezioni, in poliestere nei toni pastello di corallo, senape, azzurro e crema. Meno materiale, piu movimento: gli orecchini a cerchio aperto oscillano quando cammini, e la collana si abbina bene al bracciale della stessa serie."},
+      aurora: {title:"Aurora Pop", desc:"Una treccia sottile in poliestere nei toni pastello di corallo, senape, azzurro e crema. Meno materiale, piu movimento: gli orecchini a cerchio aperto oscillano quando cammini, e la collana si abbina bene al bracciale della stessa serie."},
       amalfi: {title:"Intreccio d'Amalfi", desc:"Turchese acceso, lavorato a uncinetto in poliestere pieno. La collana chiude con un fiocco che puoi stringere o allentare per regolare la lunghezza; il bracciale segue la stessa logica, mentre gli orecchini a goccia sono gli unici del set con un gancio in metallo a vista."},
       sunset: {title:"Sunset", desc:"Lo stesso studio scuro di Sera Vellutata, questa volta con un arancio bruciato pieno, senza mischiare toni. Collana e bracciale si chiudono con un nodo a fiocco regolabile, e gli orecchini a disco riprendono lo stesso punto a uncinetto del resto del set."},
       dorata: {title:"Trama Dorata", desc:"Giallo oro pieno, lavorato a uncinetto in poliestere, fotografato su legno scuro con il simbolo del nodo Trama Chiara inciso sullo sfondo. Collana e bracciale si chiudono con un nodo a fiocco; gli orecchini a goccia riprendono lo stesso intreccio in miniatura."},
@@ -703,7 +708,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       oltremare: {title:"Oltremare", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un blu navy pieno che richiama il mare aperto. La collana si chiude con un nodo semplice all'estremita, senza ganci metallici a vista; gli orecchini a sfera riprendono lo stesso punto in miniatura, fotografati su marmo chiaro con frammenti di corallo e sabbia dorata."},
       unicorn: {title:"Unicorn", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, con quattro colori pastello mescolati nello stesso intreccio: rosa, lilla, azzurro e crema. Il bracciale si annoda a mano e lascia i fili in eccesso come frangia; gli orecchini riprendono lo stesso mix di colori in un cerchio piu piccolo, fotografati su legno chiaro con una foglia di monstera."},
       ocra: {title:"Ocra", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un senape caldo che vira leggermente verso l'arancio. Gli orecchini sono ad anello aperto invece che a cerchio pieno, l'unica variazione di forma di questa collezione; lo sfondo e pietra chiara, con l'ombra di una foglia di palma che attraversa la scena."},
-      bianca: {title:"Bianca", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un bianco pieno che qui diventa protagonista invece che sfondo. Fotografati su ardesia scura con polvere dorata sparsa, e il contrasto piu netto del catalogo; la collana chiude con un doppio laccio annodato a vista."},
+      "total-white": {title:"Total White", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un bianco pieno che qui diventa protagonista invece che sfondo. Fotografati su ardesia scura con polvere dorata sparsa, e il contrasto piu netto del catalogo; la collana chiude con un doppio laccio annodato a vista."},
       lilla: {title:"Lilla", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un lilla tenue e delicato. Fotografati su legno scuro con foglie di alloro essiccate; gli orecchini a goccia riprendono la stessa tonalita della collana, con un piccolo gancio in metallo a vista."},
       cielo: {title:"Cielo", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un azzurro cielo pieno e luminoso. Fotografati su ardesia scura attraversata da venature dorate; gli orecchini sono due sfere annodate di misura leggermente diversa, appese a un gancio in metallo."},
       ibisco: {title:"Ibisco Lavico", desc:"Collana, bracciale e orecchini in fettuccia di poliestere lavorata a uncinetto, in un fucsia acceso che richiama il colore dell'ibisco. Fotografati su intonaco chiaro, con un lino grezzo drappeggiato sullo sfondo; gli orecchini a sfera riprendono lo stesso punto della collana, in versione piu piccola."},
