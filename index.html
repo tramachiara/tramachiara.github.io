@@ -226,15 +226,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
 .footer-col a:hover{color:var(--terracotta);}
 .footer-note{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:0.74rem;color:var(--taupe);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
-/* ---------- Cookie banner ---------- */
-.cookie-banner{position:fixed;left:0;right:0;bottom:-100%;z-index:300;padding:20px;transition:bottom 320ms ease;}
-.cookie-banner.is-visible{bottom:0;}
-.cookie-banner-inner{max-width:920px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 24px;box-shadow:0 20px 50px -20px rgba(0,0,0,0.5);display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
-.cookie-banner p{font-size:0.86rem;color:var(--taupe);max-width:60ch;}
-.cookie-banner a{color:var(--terracotta);text-decoration:underline;}
-.cookie-actions{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto;}
-@media (max-width:560px){ .cookie-actions{margin-left:0;width:100%;} .cookie-actions .btn{flex:1;justify-content:center;} }
-
 .reveal{opacity:0;transform:translateY(18px);transition:opacity 700ms ease,transform 700ms ease;}
 .reveal.is-visible{opacity:1;transform:none;}
 
@@ -633,16 +624,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
   </div>
 </footer>
 
-<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Preferenze cookie">
-  <div class="cookie-banner-inner">
-    <p>Questo sito usa solo cookie tecnici necessari al funzionamento. Non installiamo cookie di profilazione o di terze parti. <a href="privacy.html">Leggi l'informativa privacy</a>.</p>
-    <div class="cookie-actions">
-      <button type="button" class="btn btn-ghost-light btn-sm" id="cookieDecline">Solo necessari</button>
-      <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Accetta</button>
-    </div>
-  </div>
-</div>
-
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <div class="lightbox-backdrop" data-lightbox-close></div>
   <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
@@ -721,20 +702,6 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
-  }
-
-  var cookieBanner = document.getElementById('cookieBanner');
-  if (cookieBanner){
-    var CONSENT_KEY = 'tc-cookie-consent';
-    if (!localStorage.getItem(CONSENT_KEY)){
-      cookieBanner.classList.add('is-visible');
-    }
-    function setCookieConsent(value){
-      localStorage.setItem(CONSENT_KEY, value);
-      cookieBanner.classList.remove('is-visible');
-    }
-    document.getElementById('cookieAccept').addEventListener('click', function(){ setCookieConsent('all'); });
-    document.getElementById('cookieDecline').addEventListener('click', function(){ setCookieConsent('necessary'); });
   }
 
   var revealEls = document.querySelectorAll('.reveal');

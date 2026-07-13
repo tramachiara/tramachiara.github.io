@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy e cookie — Trama Chiara</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/branding/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/favicon-180.png">
+<meta name="theme-color" content="#17130F">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/font-001.woff2) format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/font-002.woff2) format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/font-005.woff2) format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/font-006.woff2) format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/font-007.woff2) format('woff2');}
+
+:root{
+  --bg:#17130F; --surface:#221B15; --surface-2:#2C2119; --ink:#F3ECDF; --taupe:#C3B296;
+  --terracotta:#D9B65A; --terracotta-dark:#B8923F; --coral:#E8CC85;
+  --deep:#0E0B08; --line:rgba(243,236,223,0.16); --shadow:0 20px 40px -24px rgba(0,0,0,0.6);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding-inline:24px;}
+.eyebrow{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--terracotta);display:inline-flex;align-items:center;gap:0.5em;}
+.eyebrow::before{content:"";width:1.4em;height:1px;background:var(--terracotta);display:inline-block;}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.15;margin:0;text-wrap:balance;color:var(--ink);}
+.h1{font-size:clamp(2rem,4.4vw,3rem);}
+.h2{font-size:clamp(1.35rem,2.4vw,1.7rem);}
+p{margin:0;}
+a{color:var(--terracotta);}
+
+/* ---------- Nav (identica al sito) ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-block:16px;transition:background 300ms ease,border-color 300ms ease,backdrop-filter 300ms ease,padding 300ms ease;border-bottom:1px solid transparent;background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:blur(10px);border-color:var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;}
+.logo svg{width:26px;height:26px;flex:none;}
+.logo-mark{stroke:var(--terracotta);}
+.logo-text{font-family:'Fraunces',serif;font-size:1.28rem;color:var(--ink);white-space:nowrap;}
+.logo-text i{font-style:italic;font-weight:400;color:var(--terracotta);}
+.logo-text b{font-weight:500;font-style:normal;}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;}
+.nav-links a{text-decoration:none;font-size:0.88rem;font-weight:500;color:var(--ink);padding:6px 2px;border-bottom:1px solid transparent;transition:border-color 200ms ease;cursor:pointer;}
+.nav-links a:hover,.nav-links a:focus-visible{border-color:var(--coral);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:0.85rem;text-decoration:none;cursor:pointer;border:none;border-radius:4px;padding:12px 22px;transition:transform 200ms ease,background 200ms ease;letter-spacing:0.02em;}
+.btn:focus-visible{outline:2px solid var(--coral);outline-offset:3px;}
+.btn-primary{background:var(--terracotta);color:#1c1712;box-shadow:var(--shadow);}
+.btn-primary:hover{transform:translateY(-2px);background:var(--terracotta-dark);}
+.btn-ghost-light{background:var(--surface);color:var(--ink);border:1px solid var(--line);}
+.btn-ghost-light:hover{background:var(--surface-2);}
+.btn-sm{padding:10px 18px;font-size:0.76rem;}
+.nav-cta{display:flex;align-items:center;gap:12px;}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:38px;height:38px;flex:none;border:none;background:transparent;cursor:pointer;padding:0;}
+.nav-toggle span{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform 220ms ease,opacity 220ms ease;}
+.nav.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.menu-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media (max-width:860px){
+  .nav-toggle{display:flex;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:color-mix(in srgb, var(--bg) 96%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;transition:max-height 280ms ease,opacity 200ms ease;}
+  .nav.menu-open .nav-links{max-height:320px;opacity:1;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;padding:16px 24px;border-bottom:1px solid var(--line);}
+}
+
+/* ---------- Contenuto legale ---------- */
+.legal-hero{padding:150px 0 40px;border-bottom:1px solid var(--line);}
+.legal-hero .lede{margin-top:14px;color:var(--taupe);max-width:62ch;font-size:1.02rem;}
+.legal-updated{margin-top:18px;font-size:0.8rem;color:var(--taupe);}
+.legal-body{padding:56px 0 100px;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start;}
+@media (max-width:860px){ .legal-body{grid-template-columns:1fr;gap:32px;} }
+.legal-toc{position:sticky;top:100px;display:flex;flex-direction:column;gap:2px;}
+@media (max-width:860px){ .legal-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:8px 18px;} }
+.legal-toc a{font-size:0.82rem;color:var(--taupe);text-decoration:none;padding:6px 0;border-left:2px solid transparent;padding-left:12px;}
+.legal-toc a:hover{color:var(--ink);border-color:var(--terracotta);}
+@media (max-width:860px){ .legal-toc a{border-left:none;padding-left:0;border-bottom:2px solid transparent;} .legal-toc a:hover{border-color:var(--terracotta);} }
+.legal-section{padding-bottom:36px;margin-bottom:36px;border-bottom:1px solid var(--line);}
+.legal-section:last-child{border-bottom:none;margin-bottom:0;}
+.legal-section h2{margin-bottom:14px;}
+.legal-section p,.legal-section li{color:var(--taupe);font-size:0.96rem;max-width:70ch;}
+.legal-section p + p, .legal-section ul + p, .legal-section p + ul{margin-top:12px;}
+.legal-section ul{margin:12px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:8px;}
+.legal-note{margin-top:18px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:8px;font-size:0.86rem;color:var(--taupe);}
+mark.ph{background:color-mix(in srgb, var(--terracotta) 32%, transparent);color:var(--ink);padding:1px 7px;border-radius:4px;font-style:normal;font-weight:600;text-decoration:none;}
+.legal-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:0.88rem;}
+.legal-table th,.legal-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);color:var(--taupe);}
+.legal-table th{color:var(--ink);font-weight:700;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.04em;}
+.legal-table-wrap{overflow-x:auto;}
+
+/* ---------- Footer (identico al sito) ---------- */
+footer{border-top:1px solid var(--line);padding-block:44px;}
+.footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.footer-col{display:flex;flex-direction:column;gap:10px;}
+.footer-col h4{font-family:'Manrope',sans-serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe);margin:0 0 4px;}
+.footer-col a{text-decoration:none;font-size:0.88rem;color:var(--ink);}
+.footer-col a:hover{color:var(--terracotta);}
+.footer-note{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:0.74rem;color:var(--taupe);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+</style>
+
+<nav class="nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html" aria-label="Trama Chiara, home">
+      <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="logo-mark" d="M2 10c3-6 8-6 11-1s6 5 9-1M2 10c3 6 8 6 11 1s6-5 9 1" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M14.5 9.3c1-1.3 2-1.3 3 0" stroke="var(--bg)" stroke-width="2.6" stroke-linecap="round"/>
+        <path class="logo-mark" d="M14.5 9.3c1-1.3 2-1.3 3 0" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text"><i>Trama</i> <b>Chiara</b></span>
+    </a>
+    <ul class="nav-links" id="navLinksList">
+      <li><a href="index.html#collezioni">Collezioni</a></li>
+      <li><a href="index.html#categorie">Collane, Bracciali, Orecchini</a></li>
+      <li><a href="index.html#storia">La storia</a></li>
+      <li><a href="index.html#contatti">Contatti</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost-light btn-sm" href="index.html">Torna al sito</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinksList">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="legal-hero">
+    <div class="wrap">
+      <span class="eyebrow">Trama Chiara</span>
+      <h1 class="h1" style="margin-top:14px;">Privacy e cookie</h1>
+      <p class="lede">Informativa sul trattamento dei dati personali ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 ("GDPR") e normativa cookie/e-privacy applicabile.</p>
+      <p class="legal-updated">Ultimo aggiornamento: <mark class="ph">[GG/MM/AAAA — inserire data di pubblicazione]</mark></p>
+    </div>
+  </header>
+
+  <div class="wrap legal-body">
+    <nav class="legal-toc" aria-label="Indice della pagina">
+      <a href="#titolare">Titolare del trattamento</a>
+      <a href="#dati">Dati raccolti</a>
+      <a href="#whatsapp">Ordini via WhatsApp</a>
+      <a href="#cookie">Cookie</a>
+      <a href="#base-giuridica">Base giuridica e conservazione</a>
+      <a href="#diritti">I tuoi diritti</a>
+      <a href="#modifiche">Modifiche</a>
+      <a href="#contatti-privacy">Contatti</a>
+    </nav>
+
+    <div class="legal-content">
+
+      <section class="legal-section" id="titolare">
+        <h2 class="h2">1. Titolare del trattamento</h2>
+        <p>Il Titolare del trattamento dei dati è:</p>
+        <p style="margin-top:10px;">
+          <mark class="ph">[Nome e Cognome / Ragione Sociale]</mark><br>
+          <mark class="ph">[Indirizzo completo della sede/attività]</mark><br>
+          P.IVA/C.F.: <mark class="ph">[numero]</mark><br>
+          Email: <mark class="ph">[email@tramachiara.it]</mark><br>
+          PEC: <mark class="ph">[eventuale indirizzo PEC]</mark>
+        </p>
+        <div class="legal-note">Questa sezione va completata con i dati anagrafici e fiscali reali di Chiara prima della pubblicazione definitiva.</div>
+      </section>
+
+      <section class="legal-section" id="dati">
+        <h2 class="h2">2. Quali dati raccogliamo</h2>
+        <p>Questo sito è un sito vetrina statico: non contiene moduli di contatto, account utente o carrello. Non raccogliamo direttamente dati personali attraverso il sito, ad eccezione dei dati tecnici raccolti automaticamente dal servizio di hosting (GitHub Pages), come indirizzo IP, tipo di browser e pagine visitate, necessari al solo funzionamento tecnico della connessione.</p>
+        <p>Non effettuiamo profilazione degli utenti né tracciamento a fini pubblicitari.</p>
+      </section>
+
+      <section class="legal-section" id="whatsapp">
+        <h2 class="h2">3. Ordini e contatti via WhatsApp/Instagram</h2>
+        <p>Gli ordini e le richieste avvengono tramite un rinvio a WhatsApp o Instagram, servizi di proprietà di Meta Platforms Inc. Quando scrivi a Chiara tramite questi canali, i dati che condividi volontariamente (es. nome, numero di telefono, indirizzo di spedizione, preferenze sul prodotto) vengono trattati da Chiara per gestire l'ordine e, per la parte tecnica della comunicazione, sono soggetti anche all'informativa privacy di WhatsApp/Meta, che ti invitiamo a consultare separatamente.</p>
+        <p>Questi dati vengono conservati da Chiara solo per il tempo necessario a evadere l'ordine e a rispondere a eventuali obblighi di legge (es. fiscali), e non vengono ceduti a terzi per finalità di marketing.</p>
+      </section>
+
+      <section class="legal-section" id="cookie">
+        <h2 class="h2">4. Cookie utilizzati</h2>
+        <p>Questo sito <strong>non installa alcun cookie di profilazione né cookie di terze parti</strong>: nessun Google Analytics, nessun pixel pubblicitario, nessun font o script caricato da server esterni (font e immagini sono ospitati direttamente su questo dominio). Non è quindi presente nessun banner di richiesta consenso, perché non ci sono cookie non essenziali da autorizzare.</p>
+        <div class="legal-note">Se in futuro verranno aggiunti strumenti di analisi statistica (es. Google Analytics) o pubblicitari (es. Meta Pixel), questa sezione dovrà essere aggiornata con l'elenco dei cookie utilizzati, la relativa finalità, e dovrà essere reintrodotto un banner per raccogliere il consenso preventivo dell'utente.</div>
+      </section>
+
+      <section class="legal-section" id="base-giuridica">
+        <h2 class="h2">5. Base giuridica e conservazione dei dati</h2>
+        <p>Il trattamento dei dati necessari a evadere un ordine si basa sull'esecuzione di un accordo commerciale richiesto dall'interessato (art. 6.1.b GDPR). I dati di navigazione tecnici raccolti dall'hosting si basano sul legittimo interesse a garantire la sicurezza e il funzionamento del sito (art. 6.1.f GDPR).</p>
+        <p>I dati relativi agli ordini sono conservati per <mark class="ph">[indicare il periodo, es. il tempo necessario agli adempimenti fiscali/contabili di legge]</mark>.</p>
+      </section>
+
+      <section class="legal-section" id="diritti">
+        <h2 class="h2">6. I tuoi diritti</h2>
+        <p>In qualità di interessato, hai diritto in qualsiasi momento di:</p>
+        <ul>
+          <li>Accedere ai tuoi dati personali e ottenerne una copia (diritto di accesso, art. 15 GDPR)</li>
+          <li>Chiedere la rettifica di dati inesatti o incompleti (art. 16 GDPR)</li>
+          <li>Chiedere la cancellazione dei tuoi dati, quando non più necessari (art. 17 GDPR)</li>
+          <li>Chiedere la limitazione del trattamento (art. 18 GDPR)</li>
+          <li>Opporti al trattamento basato sul legittimo interesse (art. 21 GDPR)</li>
+          <li>Ricevere i tuoi dati in un formato strutturato e trasferirli ad altro titolare (portabilità, art. 20 GDPR)</li>
+          <li>Proporre reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>), se ritieni che il trattamento violi la normativa</li>
+        </ul>
+      </section>
+
+      <section class="legal-section" id="modifiche">
+        <h2 class="h2">7. Modifiche a questa informativa</h2>
+        <p>Questa informativa può essere aggiornata nel tempo, ad esempio se cambiano gli strumenti utilizzati sul sito. La data di ultimo aggiornamento è indicata in cima alla pagina.</p>
+      </section>
+
+      <section class="legal-section" id="contatti-privacy">
+        <h2 class="h2">8. Come esercitare i tuoi diritti</h2>
+        <p>Per qualsiasi richiesta relativa ai tuoi dati personali, scrivi a: <mark class="ph">[email@tramachiara.it]</mark></p>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col" style="max-width:280px;">
+        <span class="logo-text" style="color:var(--ink);"><i style="color:var(--terracotta);">Trama</i> <b>Chiara</b></span>
+        <p style="font-size:0.85rem;color:var(--taupe);margin-top:6px;">Gioielli tessili artigianali, annodati a mano. Ogni pezzo è unico quanto chi lo indossa.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Esplora</h4>
+        <a href="index.html#collezioni">Collezioni</a>
+        <a href="index.html#categorie">Collane, bracciali, orecchini</a>
+        <a href="index.html#storia">La mia storia</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="#" onclick="return false;">WhatsApp</a>
+        <a href="#" onclick="return false;">Instagram</a>
+        <a href="#" onclick="return false;">email@tramachiara.it</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legale</h4>
+        <a href="privacy.html">Privacy e cookie</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 Trama Chiara</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('siteNav');
+  var navToggle = document.getElementById('navToggle');
+  if (navToggle){
+    navToggle.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
