@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/branding/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/favicon-180.png">
-<meta name="theme-color" content="#F6F0E4">
+<meta name="theme-color" content="#17130F">
 </head>
 <body>
 <style>
@@ -21,40 +21,20 @@
 @font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/font-007.woff2) format('woff2');}
 
 :root{
-  --bg:#F6F0E4;
-  --surface:#EFE6D3;
-  --surface-2:#E4D7BC;
-  --ink:#221B15;
-  --taupe:#6B5D4D;
-  --terracotta:#8A6B28;
-  --terracotta-dark:#6B5326;
-  --coral:#D9B65A;
-  --teal:#A88A4E;
-  --mustard:#C9A227;
-  --deep:#17130F;
-  --deep-2:#2C2119;
-  --line:rgba(34,27,21,0.14);
-  --shadow:0 20px 40px -24px rgba(34,27,21,0.35);
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#17130F; --surface:#221B15; --surface-2:#2C2119; --ink:#F3ECDF; --taupe:#C3B296;
-    --terracotta:#D9B65A; --terracotta-dark:#B8923F; --coral:#E8CC85; --teal:#B49A66; --mustard:#D9B65A;
-    --deep:#0E0B08; --deep-2:#1C1712;
-    --line:rgba(243,236,223,0.16); --shadow:0 20px 40px -24px rgba(0,0,0,0.6);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#17130F; --surface:#221B15; --surface-2:#2C2119; --ink:#F3ECDF; --taupe:#C3B296;
-  --terracotta:#D9B65A; --terracotta-dark:#B8923F; --coral:#E8CC85; --teal:#B49A66; --mustard:#D9B65A;
-  --deep:#0E0B08; --deep-2:#1C1712;
-  --line:rgba(243,236,223,0.16); --shadow:0 20px 40px -24px rgba(0,0,0,0.6);
-}
-:root[data-theme="light"]{
-  --bg:#F6F0E4; --surface:#EFE6D3; --surface-2:#E4D7BC; --ink:#221B15; --taupe:#6B5D4D;
-  --terracotta:#8A6B28; --terracotta-dark:#6B5326; --coral:#D9B65A; --teal:#A88A4E; --mustard:#C9A227;
-  --deep:#17130F; --deep-2:#2C2119;
-  --line:rgba(34,27,21,0.14); --shadow:0 20px 40px -24px rgba(34,27,21,0.35);
+  --bg:#17130F;
+  --surface:#221B15;
+  --surface-2:#2C2119;
+  --ink:#F3ECDF;
+  --taupe:#C3B296;
+  --terracotta:#D9B65A;
+  --terracotta-dark:#B8923F;
+  --coral:#E8CC85;
+  --teal:#B49A66;
+  --mustard:#D9B65A;
+  --deep:#0E0B08;
+  --deep-2:#1C1712;
+  --line:rgba(243,236,223,0.16);
+  --shadow:0 20px 40px -24px rgba(0,0,0,0.6);
 }
 
 *{box-sizing:border-box;}
@@ -106,7 +86,19 @@ a{color:inherit;}
 .btn-ghost-light:hover{background:rgba(255,255,255,0.2);}
 .btn-sm{padding:10px 18px;font-size:0.76rem;}
 .nav-cta{display:flex;align-items:center;gap:12px;}
-@media (max-width:860px){ .nav-links{display:none;} }
+.nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:38px;height:38px;flex:none;border:none;background:transparent;cursor:pointer;padding:0;}
+.nav-toggle span{display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform 220ms ease,opacity 220ms ease,background 300ms ease;}
+.nav.is-solid .nav-toggle span{background:var(--ink);}
+.nav.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.menu-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media (max-width:860px){
+  .nav-toggle{display:flex;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:color-mix(in srgb, var(--bg) 96%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;transition:max-height 280ms ease,opacity 200ms ease;}
+  .nav.menu-open .nav-links{max-height:320px;opacity:1;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;color:var(--ink);padding:16px 24px;border-bottom:1px solid var(--line);}
+}
 
 /* ---------- Hero full-bleed ---------- */
 .hero-full{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;}
@@ -156,7 +148,8 @@ a{color:inherit;}
 }
 
 /* ---------- Sections ---------- */
-section{padding-block:88px;}
+section{padding-block:56px;}
+@media (max-width:700px){ section{padding-block:36px;} }
 .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px;flex-wrap:wrap;}
 .section-head .lede{margin-top:12px;}
 
@@ -233,6 +226,15 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
 .footer-col a:hover{color:var(--terracotta);}
 .footer-note{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:0.74rem;color:var(--taupe);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 
+/* ---------- Cookie banner ---------- */
+.cookie-banner{position:fixed;left:0;right:0;bottom:-100%;z-index:300;padding:20px;transition:bottom 320ms ease;}
+.cookie-banner.is-visible{bottom:0;}
+.cookie-banner-inner{max-width:920px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 24px;box-shadow:0 20px 50px -20px rgba(0,0,0,0.5);display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.cookie-banner p{font-size:0.86rem;color:var(--taupe);max-width:60ch;}
+.cookie-banner a{color:var(--terracotta);text-decoration:underline;}
+.cookie-actions{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto;}
+@media (max-width:560px){ .cookie-actions{margin-left:0;width:100%;} .cookie-actions .btn{flex:1;justify-content:center;} }
+
 .reveal{opacity:0;transform:translateY(18px);transition:opacity 700ms ease,transform 700ms ease;}
 .reveal.is-visible{opacity:1;transform:none;}
 
@@ -299,7 +301,7 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       </svg>
       <span class="logo-text"><i>Trama</i> <b>Chiara</b></span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinksList">
       <li><a href="#collezioni">Collezioni</a></li>
       <li><a href="#categorie">Collane, Bracciali, Orecchini</a></li>
       <li><a href="#storia">La storia</a></li>
@@ -307,6 +309,9 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
     </ul>
     <div class="nav-cta">
       <a class="btn btn-ghost-light btn-sm" href="#" onclick="return false;">Scrivimi su WhatsApp</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinksList">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
@@ -616,12 +621,27 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
         <a href="#" onclick="return false;">Instagram</a>
         <a href="#" onclick="return false;">email@tramachiara.it</a>
       </div>
+      <div class="footer-col">
+        <h4>Legale</h4>
+        <a href="privacy.html">Privacy e cookie</a>
+      </div>
     </div>
     <div class="footer-note">
       <span>© 2026 Trama Chiara</span>
+      <span><a href="privacy.html" style="color:inherit;">Privacy e cookie</a></span>
     </div>
   </div>
 </footer>
+
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Preferenze cookie">
+  <div class="cookie-banner-inner">
+    <p>Questo sito usa solo cookie tecnici necessari al funzionamento. Non installiamo cookie di profilazione o di terze parti. <a href="privacy.html">Leggi l'informativa privacy</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-ghost-light btn-sm" id="cookieDecline">Solo necessari</button>
+      <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Accetta</button>
+    </div>
+  </div>
+</div>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <div class="lightbox-backdrop" data-lightbox-close></div>
@@ -687,6 +707,34 @@ footer{border-top:1px solid var(--line);padding-block:44px;}
       });
     }, {rootMargin: '-88% 0px 0px 0px'});
     navIo.observe(hero);
+  }
+
+  var navToggle = document.getElementById('navToggle');
+  if (navToggle){
+    navToggle.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  var cookieBanner = document.getElementById('cookieBanner');
+  if (cookieBanner){
+    var CONSENT_KEY = 'tc-cookie-consent';
+    if (!localStorage.getItem(CONSENT_KEY)){
+      cookieBanner.classList.add('is-visible');
+    }
+    function setCookieConsent(value){
+      localStorage.setItem(CONSENT_KEY, value);
+      cookieBanner.classList.remove('is-visible');
+    }
+    document.getElementById('cookieAccept').addEventListener('click', function(){ setCookieConsent('all'); });
+    document.getElementById('cookieDecline').addEventListener('click', function(){ setCookieConsent('necessary'); });
   }
 
   var revealEls = document.querySelectorAll('.reveal');
