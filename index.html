@@ -117,18 +117,9 @@ a{color:inherit;}
 .hero-slide:nth-child(2){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-044.webp) center/cover no-repeat;animation-delay:-6s;}
 .hero-slide:nth-child(3){background:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/img-045.webp) center 45%/cover no-repeat;animation-delay:-12s;}
 .hero-slide:nth-child(4){background:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/img-046.webp) center/cover no-repeat;animation-delay:-18s;}
-@media (max-width:700px){
-  .hero-slide:nth-child(1){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-1-mobile.webp);background-position:center;}
-  .hero-slide:nth-child(2){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-2-mobile.webp);background-position:center;}
-  .hero-slide:nth-child(3){background-image:linear-gradient(180deg,rgba(14,11,8,0.12) 0%,rgba(14,11,8,0.5) 100%), url(assets/images/hero-mobile/hero-3-mobile.webp);background-position:center;}
-  .hero-slide:nth-child(4){background-image:linear-gradient(180deg,rgba(14,11,8,0.05) 0%,rgba(14,11,8,0.4) 100%), url(assets/images/hero-mobile/hero-4-mobile.webp);background-position:center;}
-}
 @keyframes heroZoom{0%{transform:scale(1);}100%{transform:scale(1.1);}}
 @media (prefers-reduced-motion: reduce){ .hero-slide{animation:none;transition:none;} }
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,8,0.15) 0%,rgba(14,11,8,0.2) 40%,rgba(10,8,6,0.85) 100%);}
-@media (max-width:700px){
-  .hero-scrim{background:linear-gradient(180deg,rgba(14,11,8,0.28) 0%,rgba(14,11,8,0.4) 30%,rgba(10,8,6,0.82) 58%,rgba(8,6,4,0.95) 100%);}
-}
 .hero-content{position:relative;z-index:2;width:100%;padding-bottom:56px;color:#fff;}
 .hero-content .eyebrow{color:var(--coral);}
 .hero-content .eyebrow::before{background:var(--coral);}
@@ -141,10 +132,28 @@ a{color:inherit;}
 .hero-dots{display:flex;gap:8px;margin-top:34px;}
 .hero-textband{position:absolute;left:0;top:0;bottom:0;width:clamp(460px,60vw,780px);pointer-events:none;z-index:1;background:linear-gradient(90deg,rgba(10,8,6,0.6) 0%,rgba(10,8,6,0.46) 60%,rgba(10,8,6,0.16) 85%,transparent 100%);backdrop-filter:blur(20px) saturate(130%);-webkit-backdrop-filter:blur(20px) saturate(130%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 76%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 76%,transparent 100%);}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ .hero-textband{background:linear-gradient(90deg,rgba(8,6,4,0.78) 0%,rgba(8,6,4,0.55) 60%,transparent 100%);} }
-@media (max-width:700px){ .hero-textband{display:none;} }
 .hero-claim,.hero-sub{text-shadow:0 2px 20px rgba(0,0,0,0.5);}
 .hero-dot{width:26px;height:3px;border-radius:2px;background:rgba(255,255,255,0.3);border:none;cursor:pointer;padding:0;transition:background 250ms ease,width 250ms ease;}
 .hero-dot.is-active{background:var(--coral);width:40px;}
+
+/* ---------- Hero mobile: foto intera in un riquadro, testo sotto (nessuna sovrapposizione) ---------- */
+@media (max-width:700px){
+  .hero-full{min-height:0;display:block;padding-top:76px;}
+  .hero-slides{position:relative;inset:auto;aspect-ratio:4/3;margin:0 24px;width:auto;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .hero-slide:nth-child(1),.hero-slide:nth-child(2),.hero-slide:nth-child(3),.hero-slide:nth-child(4){background-size:contain;background-position:center;background-repeat:no-repeat;}
+  .hero-scrim,.hero-textband{display:none;}
+  .hero-content{padding:28px 0 48px;color:var(--ink);}
+  .hero-content .eyebrow{color:var(--terracotta);}
+  .hero-content .eyebrow::before{background:var(--terracotta);}
+  .hero-claim,.hero-sub{text-shadow:none;}
+  .hero-sub{color:var(--taupe);}
+  .hero-dot{background:var(--line);}
+  .hero-dot.is-active{background:var(--terracotta);}
+  .btn-ghost-light{background:var(--surface);color:var(--ink);border-color:var(--line);backdrop-filter:none;-webkit-backdrop-filter:none;}
+  .nav{background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line);}
+  .nav .logo-text{color:var(--ink);}
+  .nav .logo-mark{stroke:var(--terracotta);}
+}
 
 /* ---------- Sections ---------- */
 section{padding-block:88px;}
